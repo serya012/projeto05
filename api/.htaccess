@@ -1,0 +1,39 @@
+RewriteEngine on
+
+# Rewrite rules for usuário API
+RewriteRule ^usuario/?$ api_usuario.php [L]
+RewriteRule ^usuario/([0-9]+)?$ api_usuario.php?id=$1 [L]
+
+# localhost/usuario/email/senha
+RewriteRule ^usuario/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/([a-zA-Z0-9]+)/?$ api_usuario.php?email=$1&senha=$2 [L]
+
+# localiza registro pelo email
+RewriteRule ^usuario/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})?$ api_usuario.php?email=$1 [L]
+
+# Localiza registro pelo CPF
+RewriteRule ^usuario/([^/]+)/?$ api_usuario.php?cpf=$1 [L]
+
+# Rewrite rules for cliente API
+RewriteRule ^cliente/?$ api_cliente.php [L]
+RewriteRule ^cliente/([0-9]+)?$ api_cliente.php?id=$1 [L]
+
+# localhost/cliente/email/senha
+RewriteRule ^cliente/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/([a-zA-Z0-9]+)/?$ api_cliente.php?email=$1&senha=$2 [L]
+
+# localiza registro pelo email
+RewriteRule ^cliente/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})?$ api_cliente.php?email=$1 [L]
+
+# Localiza registro pelo CPF
+RewriteRule ^cliente/([^/]+)/?$ api_cliente.php?cpf=$1 [L]
+
+# Rewrite rules for evento API
+RewriteRule ^evento/?$ api_evento.php [L]
+RewriteRule ^evento/([0-9]+)?$ api_evento.php?id=$1 [L]
+
+# Rewrite rules for feedback API
+RewriteRule ^feedback/?$ api_feedback.php [L]
+RewriteRule ^feedback/([0-9]+)?$ api_feedback.php?id=$1 [L]
+
+# Rewrite rules for orcamento API
+RewriteRule ^orcamento/?$ api_orcamento.php [L]
+RewriteRule ^orcamento/([0-9]+)?$ api_orcamento.php?id=$1 [L]

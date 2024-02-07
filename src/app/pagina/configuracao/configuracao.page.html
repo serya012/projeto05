@@ -1,0 +1,34 @@
+<!-- configuracao.page.html -->
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Configuração</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Configuração</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <!-- Botões estilizados para diferentes configurações -->
+    <ion-item (click)="entrar()" class="custom-button">
+      <ion-label>Entrar</ion-label>
+    </ion-item>
+
+    <ion-item (click)="sair()" class="custom-button">
+      <ion-label>Sair da Conta</ion-label>
+    </ion-item>
+
+    <ion-item (click)="alterarConta()" class="custom-button">
+      <ion-label>Alterar e-mail</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

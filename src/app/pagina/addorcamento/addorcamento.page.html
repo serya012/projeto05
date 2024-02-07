@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/orcamentos"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ atualizarOrcamento ? 'Atualizar Orçamento' : 'Novo Orçamento' }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <!-- Seção de opções de compra -->
+  <ion-header [translucent]="true">
+    <ion-toolbar color="primary">
+      <ion-title class="ion-text-center">Orçamento</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content [fullscreen]="true" class="ion-text-center">
+  
+    <!-- Lista de opções -->
+    <ion-row>
+      <ion-col>
+        <ion-button class="opcoes-button" (click)="mostrarOpcoes('bolo')">Opções de Bolo</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button class="opcoes-button" (click)="mostrarOpcoes('bebidas')">Opções de Bebidas</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button class="opcoes-button" (click)="mostrarOpcoes('decoracoes')">Opções de Decoração</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button class="opcoes-button" (click)="mostrarOpcoes('comidas')">Opções de Comidas</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button class="opcoes-button" (click)="mostrarOpcoes('local')">Opções de Local</ion-button>
+      </ion-col>
+    </ion-row>
+  
+    <!-- Lista de opções -->
+    <ion-list *ngIf="categoriaSelecionada">
+      <ion-button (click)="selecionarTodos(opcoes[categoriaSelecionada])">Selecionar Todos</ion-button>
+      <ion-item *ngFor="let opcao of opcoes[categoriaSelecionada]">
+        <ion-label>{{ opcao.nome }} - Preço: {{ opcao.preco }}</ion-label>
+        <ion-checkbox slot="end" [(ngModel)]="opcao.selecionado"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+
+    <ion-button expand="full" (click)="confirmarOrcamento()">Confirmar Orçamento</ion-button>
+  
+  </ion-content>
+</ion-content>

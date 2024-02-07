@@ -1,0 +1,64 @@
+ion-header {
+  ion-toolbar {
+    --background: #9000ff; /* Define a cor de fundo para o cabeçalho */
+    color: #ffffff; /* Define a cor do texto para o cabeçalho */
+    
+    ion-button {
+      --background: #777777; /* Define a cor de fundo para os botões */
+      --border-radius: 8px; /* Define o raio da borda para os botões */
+      font-weight: bold; /* Define a espessura da fonte para os botões */
+    }
+
+    ion-title {
+      // Centraliza o título dentro da barra de ferramentas do cabeçalho
+      text-align: center;
+    }
+  }
+}
+
+ion-content {
+  [fullscreen=true] {
+    // Estilo para o conteúdo em tela cheia
+    position: relative; /* Define a posição como relativa */
+  }
+
+  .ion-text-center {
+    // Centraliza o texto dentro do conteúdo
+    text-align: center;
+  }
+
+  .opcoes-button {
+    // Estilo para os botões de opções
+    --background: #9000ff; /* Define a cor de fundo para os botões de opções */
+    --border-radius: 8px; /* Define o raio da borda para os botões de opções */
+    color: #ffffff; /* Define a cor do texto para os botões de opções */
+    font-weight: bold; /* Define a espessura da fonte para os botões de opções */
+    margin-bottom: 10px; /* Define a margem inferior para os botões de opções */
+  }
+
+  ion-list {
+    // Estilo para a lista de opções
+    ion-button {
+      --background: #777777; /* Define a cor de fundo para os botões na lista de opções */
+      --border-radius: 8px; /* Define o raio da borda para os botões na lista de opções */
+      font-weight: bold; /* Define a espessura da fonte para os botões na lista de opções */
+      color: #ffffff; /* Define a cor do texto para os botões na lista de opções */
+      margin-top: 10px; /* Define a margem superior para os botões na lista de opções */
+    }
+
+    ion-item {
+      // Estilo para os itens na lista de opções
+      ion-label {
+        color: #ffffff; /* Define a cor do texto para os rótulos na lista de opções */
+      }
+    }
+  }
+
+  ion-button.expand-full {
+    // Estilo para o botão de confirmar orçamento
+    --background: #9000ff; /* Define a cor de fundo para o botão de confirmar orçamento */
+    --border-radius: 8px; /* Define o raio da borda para o botão de confirmar orçamento */
+    font-weight: bold; /* Define a espessura da fonte para o botão de confirmar orçamento */
+    margin-top: 20px; /* Define a margem superior para o botão de confirmar orçamento */
+  }
+}

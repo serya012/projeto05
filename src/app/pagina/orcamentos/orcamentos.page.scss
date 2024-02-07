@@ -1,0 +1,57 @@
+ion-header {
+  ion-toolbar {
+    --background: var(--ion-color-primary); /* Define a cor de fundo para o cabeçalho */
+    color: #ffffff; /* Define a cor do texto para o cabeçalho */
+    
+    ion-title {
+      // Centraliza o título dentro da barra de ferramentas do cabeçalho
+      text-align: center;
+    }
+  }
+}
+
+ion-content {
+  [fullscreen=true] {
+    // Estilo para o conteúdo em tela cheia
+    position: relative; /* Define a posição como relativa para que o ícone adicionar fique posicionado corretamente */
+  }
+
+  .ion-padding {
+    // Estilo para o conteúdo com classe "ion-padding"
+    padding: 16px; /* Adiciona preenchimento interno ao conteúdo */
+  }
+
+  .custom-icon-container {
+    // Estilo para o contêiner do ícone personalizado
+    position: absolute; /* Define a posição como absoluta para que o ícone fique posicionado corretamente */
+    bottom: 16px; /* Define a distância do fundo */
+    right: 16px; /* Define a distância da direita */
+    cursor: pointer; /* Altera o cursor para indicar interatividade */
+  }
+
+  .custom-icon {
+    // Estilo para o ícone personalizado
+    font-size: 48px; /* Define o tamanho do ícone */
+    background-color: #9000ff; /* Define a cor de fundo do ícone */
+    border-radius: 50%; /* Faz com que o ícone tenha uma forma circular */
+    padding: 12px; /* Adiciona preenchimento interno ao ícone */
+    color: #ffffff; /* Define a cor do ícone */
+  }
+
+  ion-button {
+    --background: #9000ff; /* Define a cor de fundo para os botões */
+    --border-radius: 8px; /* Define o raio da borda para os botões */
+    font-weight: bold; /* Define a espessura da fonte para os botões */
+    margin-top: 20px; /* Define a margem superior para os botões */
+  }
+
+  ion-footer {
+    ion-toolbar {
+      // Estilo para a barra de ferramentas do rodapé
+      ion-button {
+        --background: #9000ff; /* Define a cor de fundo para os botões no rodapé */
+        --border-radius: 8px; /* Define o raio da borda para os botões no rodapé */
+      }
+    }
+  }
+}

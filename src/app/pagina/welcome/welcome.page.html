@@ -1,0 +1,21 @@
+<!-- /src/app/pagina/welcome/welcome.page.html -->
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-img src="assets/img/projeto.jpg" alt="Boas-vindas" class="welcome"></ion-img>
+
+  <ion-card [ngClass]="welcomeMessage.titleClass">
+    <ion-card-content class="ion-text-center">
+      <h3>
+        <span class="white-text">Bem-vindo a </span>
+        <span class="purple-text">Minha Festa</span>
+        <span class="white-text">, ou melhor, a sua Festa 😉</span>
+      </h3>
+      <h3 [ngClass]="welcomeMessage.titleClass">{{ welcomeMessage.title }}</h3>
+      <p [ngClass]="welcomeMessage.descriptionClass">{{ welcomeMessage.description }}</p>
+    </ion-card-content>
+  </ion-card>
+
+
+  <p class="ion-text-center">Mensagens restantes: {{ remainingMessages }}</p>
+
+  <ion-button expand="block" (click)="Avancar()">Avançar</ion-button>
+</ion-content>

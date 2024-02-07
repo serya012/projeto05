@@ -1,0 +1,41 @@
+ion-header {
+    ion-toolbar {
+      --background: #9000ff; /* Define a cor de fundo para o cabeçalho */
+      color: #ffffff; /* Define a cor do texto para o cabeçalho */
+  
+      ion-title {
+        // Centraliza o título dentro da barra de ferramentas do cabeçalho
+        text-align: center;
+      }
+    }
+  }
+  
+  ion-content {
+    [fullscreen=true] {
+      // Estilo para o conteúdo em tela cheia
+      position: relative; /* Define a posição como relativa */
+    }
+  
+    ion-item {
+      ion-label {
+        color: #ffffff; /* Define a cor do texto para as etiquetas */
+      }
+  
+      ion-button {
+        --background: #9000ff; /* Define a cor de fundo para os botões */
+        --border-radius: 8px; /* Define o raio da borda para os botões */
+        font-weight: bold; /* Define a espessura da fonte para os botões */
+        color: #ffffff; /* Define a cor do texto para os botões */
+      }
+    }
+  
+    ion-item-sliding {
+      ion-item-options {
+        ion-item-option {
+          --background: #ff0000; /* Define a cor de fundo para as opções */
+          color: #ffffff; /* Define a cor do texto para as opções */
+        }
+      }
+    }
+  }
+  
